@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riya Singh — Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #050505;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Top Bar */
+        .resume-topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 32px;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .resume-topbar-title {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .resume-topbar-title .logo-icon {
+            color: #a78bfa;
+            font-size: 1rem;
+        }
+
+        .resume-topbar-actions {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 20px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 9999px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.65);
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+
+        .btn-back:hover {
+            border-color: rgba(255, 255, 255, 0.15);
+            color: #ffffff;
+        }
+
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 24px;
+            background: #ffffff;
+            color: #050505;
+            border: 1px solid #ffffff;
+            border-radius: 9999px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.88rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+
+        .btn-download:hover {
+            background: transparent;
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-download svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* PDF Viewer */
+        .resume-viewer {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            background: #0a0a0a;
+        }
+
+        .resume-viewer iframe,
+        .resume-viewer embed {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 12px;
+        }
+
+        .resume-viewer-container {
+            width: 100%;
+            max-width: 1000px;
+            height: calc(100vh - 80px);
+        }
+
+        /* Fallback message */
+        .resume-fallback {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            text-align: center;
+            padding: 60px 24px;
+        }
+
+        .resume-fallback-icon {
+            font-size: 3rem;
+            opacity: 0.5;
+        }
+
+        .resume-fallback h2 {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .resume-fallback p {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.5);
+            max-width: 400px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .resume-topbar {
+                padding: 12px 16px;
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+
+            .resume-topbar-title {
+                font-size: 1rem;
+            }
+
+            .btn-back, .btn-download {
+                padding: 8px 16px;
+                font-size: 0.8rem;
+            }
+
+            .resume-viewer {
+                padding: 12px;
+            }
+
+            .resume-viewer-container {
+                height: calc(100vh - 100px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- RESUME: Place Riya_Singh_CV.pdf inside /assets/ (or /public/) folder before
+         deploying. The file must be present for the viewer and download to work. -->
+    
+    <!-- Top Bar -->
+    <header class="resume-topbar">
+        <div class="resume-topbar-title">
+            <span class="logo-icon">✦</span>
+            Riya Singh — Resume
+        </div>
+        <div class="resume-topbar-actions">
+            <a href="index.html" class="btn-back">
+                ← Back to Portfolio
+            </a>
+            <!-- TODO: Ensure Riya_Singh_CV.pdf is placed in the /assets/ folder -->
+            <a href="assets/Riya_Singh_CV.pdf" download="Riya_Singh_CV.pdf" class="btn-download">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <polyline points="7 10 12 15 17 10"/>
+                    <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                Download PDF
+            </a>
+        </div>
+    </header>
+
+    <!-- PDF Viewer -->
+    <main class="resume-viewer">
+        <div class="resume-viewer-container">
+            <iframe src="assets/Riya_Singh_CV.pdf" 
+                    width="100%" 
+                    height="100%"
+                    title="Riya Singh Resume"
+                    id="pdf-frame">
+            </iframe>
+        </div>
+
+        <!-- Fallback if PDF not found -->
+        <div class="resume-fallback" id="resume-fallback">
+            <div class="resume-fallback-icon">📄</div>
+            <h2>Resume PDF Not Found</h2>
+            <p>
+                Place <code>Riya_Singh_CV.pdf</code> in the <code>/assets/</code> folder 
+                to enable the viewer and download.
+            </p>
+            <a href="index.html" class="btn-back">← Back to Portfolio</a>
+        </div>
+    </main>
+
+    <script>
+        // Show fallback if iframe fails to load
+        const frame = document.getElementById('pdf-frame');
+        const fallback = document.getElementById('resume-fallback');
+        
+        frame.addEventListener('error', () => {
+            frame.parentElement.style.display = 'none';
+            fallback.style.display = 'flex';
+        });
+    </script>
+</body>
+</html>
