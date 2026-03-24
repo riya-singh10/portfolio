@@ -8,6 +8,8 @@ Features GSAP scroll animations, a canvas particle background, custom cursor, an
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 ![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=flat&logo=greensock&logoColor=white)
 
+🌐 **Live Site:** [portfolio-dusky-six-74.vercel.app](https://portfolio-dusky-six-74.vercel.app/)
+
 ---
 
 ## 🚀 Quick Start
@@ -30,7 +32,6 @@ Then visit `http://localhost:8000`
 ---
 
 ## 📂 Project Structure
-
 ```
 website/
 ├── index.html        # Main page — all sections (Hero, About, Skills, Projects, Achievements, Contact)
@@ -83,18 +84,14 @@ website/
 
 ## 🌐 Deployment
 
-### GitHub Pages
-1. Push this repo to GitHub
-2. Go to **Settings → Pages → Source**: `main` branch, `/ (root)` → **Save**
-3. Site goes live at `https://<username>.github.io/<repo-name>`
+✅ **Currently deployed on Vercel**  
+Live at: [portfolio-dusky-six-74.vercel.app](https://portfolio-dusky-six-74.vercel.app/)
 
-### Netlify
-Drag and drop this folder on [app.netlify.com/drop](https://app.netlify.com/drop) — zero config.
+Any push to the `main` branch on GitHub automatically triggers a redeployment on Vercel.
 
-### Vercel
-```bash
-npx vercel --prod
-```
+### GitHub Pages (Alternative)
+1. Go to **Settings → Pages → Source**: `main` branch, `/ (root)` → **Save**
+2. Site goes live at `https://riya-singh10.github.io/portfolio`
 
 ---
 
@@ -105,6 +102,7 @@ npx vercel --prod
 - **JavaScript** — Vanilla ES6+
 - **[GSAP 3](https://greensock.com/gsap/)** + ScrollTrigger — Scroll-driven animations
 - **[Google Fonts](https://fonts.google.com/)** — Syne (headings) + Inter (body)
+- **[Vercel](https://vercel.com)** — Hosting & continuous deployment
 
 ---
 
