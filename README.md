@@ -113,7 +113,7 @@ This project is licensed under the [MIT License](LICENSE).
 ---
 
 <p align="center">
-  Built with ☕ by <strong>Riya Singh</strong><br>
+  By <strong>Riya Singh</strong><br>
   <a href="https://www.linkedin.com/in/riya-singh30">LinkedIn</a> · 
   <a href="https://github.com/riya-singh10">GitHub</a> · 
   <a href="mailto:singhriya1003@gmail.com">Email</a>
